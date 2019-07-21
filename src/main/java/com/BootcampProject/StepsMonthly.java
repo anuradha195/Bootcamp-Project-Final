@@ -44,7 +44,7 @@ public class StepsMonthly {
 		HttpPost httppost = new HttpPost("https://www.googleapis.com/fitness/v1/users/me/dataset:aggregate");
 		httppost.addHeader("Content-Type", "application/json");
 		httppost.addHeader("Authorization",
-				"Bearer ya29.GltMB4qxkb_KxKuEUHpu_cLD1M5r-cjVhlDEGdL8EOYjaaqQS3sm4Yp9xqFU5iJpxqkaBGO-zfqU9q6MGIAbrzlwudKD_wo4bGk6iWh0Lk6Laa1SDSdfD5HUwRGW");
+				"Bearer ya29.GltMB4kDpSgASsFqo4B_Sp8TnGXJJBoLtJFYAzDztQVN2Rqn535tpPVWKgjZImlRvY_EVxyFhUM73OkyCSTAprx7Z_I0riRAptHm30zTeEyXSDP0ExUsOqPfYlst");
 		httppost.setEntity(new StringEntity(" {\r\n" + "  \"aggregateBy\": [{\r\n" + "    \"dataSourceId\":\r\n"
 				+ "      \"derived:com.google.step_count.delta:com.google.android.gms:estimated_steps\"\r\n"
 				+ "  }],\r\n" + "  \"bucketByTime\": { \"durationMillis\": 86400000 },\r\n" + "  \"startTimeMillis\": "
@@ -63,7 +63,8 @@ public class StepsMonthly {
 
 			}
 			FileWriter fw = new FileWriter(
-					"C:\\Users\\satpal kumar\\Downloads\\BootcampProject-master\\src\\main\\resources\\json\\jsonMonthly.json");
+					//"C:\\Users\\satpal kumar\\Downloads\\BootcampProject-master\\src\\main\\resources\\json\\jsonMonthly.json");
+					"jsonMonthly.json");
 			fw.write(result);
 			System.out.println("Written json result to file");
 			fw.close();
@@ -75,7 +76,7 @@ public class StepsMonthly {
 	public void getMonthlyStepCount() throws Exception {
 
 		InputStream file = new FileInputStream(
-				"C:\\Users\\satpal kumar\\Downloads\\BootcampProject-master\\src\\main\\resources\\json\\jsonMonthly.json");
+				"jsonMonthly.json");
 		JsonReader reader = Json.createReader(file);
 		JsonObject jsonObj = reader.readObject();
 		reader.close();
