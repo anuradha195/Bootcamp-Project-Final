@@ -1,0 +1,27 @@
+{
+ "bucket": [
+  {
+   "startTimeMillis": "1562878800023",
+   "endTimeMillis": "1562948866023",
+   "dataset": [
+    {
+     "dataSourceId": "derived:com.google.step_count.delta:com.google.android.gms:aggregated",
+     "point": [
+      {
+       "startTimeNanos": "1562908755658592512",
+       "endTimeNanos": "1562946839035059712",
+       "dataTypeName": "com.google.step_count.delta",
+       "originDataSourceId": "derived:com.google.step_count.delta:com.google.fitkit:apple:iphone:com.apple.health.b2cdd1e6-c041-4b6d-bd30-0501516e5ed4:local_data",
+       "value": [
+        {
+         "intVal": 4730,
+         "mapVal": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

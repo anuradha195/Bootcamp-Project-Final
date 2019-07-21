@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BE(ne)FIT</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/8mY4wFr/favicon-16x16.png">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/" />
+    <link rel="stylesheet" type="text/css"
+          href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 2400px;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.container img {
+  width: 100%;
+  height: auto;
+}
+.container .btn {
+ display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    padding: 12px 21px;
+    border: 3px solid #dbdbdb;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    width: 100%;
+   min-width: 10px;
+   max-width: 300px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6));
+    background: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    -webkit-box-shadow: #ffffff 0px 0px 9px 0px;
+    -moz-box-shadow: #ffffff 0px 0px 9px 0px;
+    box-shadow: #ffffff 0px 0px 9px 0px;
+    text-shadow: #ffffff 1px 1px 1px;
+    font: normal normal bold 20px verdana;
+    color: #807878;
+    text-decoration: none;
+}
+.btn:hover,
+.btn:focus {
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+    background: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    color: #807878;
+    text-decoration: none;
+}
+.btn:active {
+    background: #b3b3b3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#b3b3b3), to(#e6e6e6));
+    background: -moz-linear-gradient(top, #b3b3b3, #e6e6e6);
+    background: linear-gradient(to bottom, #b3b3b3, #e6e6e6);
+}
+.btn:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: absolute;
+    top: 22%;
+    left: 5%;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEPElEQVRIiZWVa2gcVRTH/+fOY7f7iJtNstY2NNEGjbaIUtSiSKgVJSli1FihxMRWSknb+GgpQVRQJFg/mA+NtmJTtNRqY2mSfjDRCkJFgo0N6kpLjNjGEjXZbDZxyWN3duYeP+xrstk09MDAmZk7/3PO795zhgAILGPRQwdhBH/1Cbe7FFLqbMRDVHxzyN/aZiz3LaUCyHyBwo3PVPLU5E5OJGpgWRWwTMEACASo6jRUtZ8czhNKeUWPv+2IkaMjAQh7gLSJyaYGnzV67X3Mz9WDWWVwUhQAM0AEMKdCEQBNG6ICX1PJl73f27QEALkoQLi+9m45ETrLplEOttVp9/OhICGp0L+r5PTXHfbnqi0awvW1lXJi/FuYZoBAC8WWEM4qaSPkvek75KDOVBBpecllBgcHYRiVbNNjZpDDOURO5wkoykVyOGIci63heLwa8dhWSKlC00eU1aWbio51XstFlK4A1h+X3mQjXomUOgMgUgxR6GtxPvHkIW/j7gX7BOCzcGNdK09H3hMlgeaijlMjudlnKkhceNBv/nnl6mzPKo+cVNJQJRUVP1vS2duzDJzrmgAAjl2pUwNhj7fhd2h3zCexuD2HU+LSVvYN+yoAkIxXMwPkiMP91DDUn8pMY3RdKxYeXwkAu47NrrQk9OUyVxUyPtrhGlPl6Acwh19bT5TZVjg2jv/ofeR4CHmYjkxwX8LCPcsFcKg8BGCdkLN/6cTSDzA4c9iV4aXLT65hTjdbft+U8H94LqYKpDJPS2eDZLEs9Ckjdj2fCLpkFqrwlhsmKRGS5Eu9A8O8PR+edArJnBZ0yyKfGTMepzCEuGU3QGoQxGACLAh0zN218flvDhTnQ+TSaY9Lp+rkheq0rykYSQoTmAFNwej2KkfqFCnuPraitVPswtsz9+NCzKt6tLHXAbyci6h7n6c/t6aGIzO3/T2F8vQABABFYABpDOxe3/WbLIu+OF2FgXgBiAhz5vzex7p31KbWLHk1fzKjTkTRnp6yRAwihtuBbgBCAIC+oS/cMvPw4TEzOTmYGcwspuLRLx7temHvG/1t9ioyuJ7r2+e7+l/kZNzkmuT+JhHpKgXvu1X8APu4fvX8u66BUHAwZqXmkc10RbvsUPSTBLroUPRY3DJWJmSiKiHNbcIq9LnG90DOrs0cgEABPX6q2XMOyPmjPf1Vc+W/s6HzCWkW4wZMQINnahsQ2QSvk9rO7vccyL7Lmuza0n55lTuwWRfaiK0x7E1iayjO+BYbiBYeh3vNmY/vLVNa7BgXnfUzW9qDdxau3eDV3Z8KkMmpDmfOdrqdICcRhkpW+Lc3PRBoeqtuhZkWX4QoN9jW3lcqw7HIzriVqLGkVWGylVmjCTWqCe0Xp6J3lhWs/vzo5nei+fDl/enb7gUAefTSadH/z88FLtVRajE7LbZCRU5f+OBD++fyrbf7/wMDBABx3cdRGwAAAABJRU5ErkJggg==") no-repeat left center transparent;
+    background-size: 100% 100%;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+    <img src="https://i.ibb.co/SKJJP8r/Background-Logo-on-Top.png">
+    <a class="btn" href="/getTokens">Sign in with Google</a>
+<!--    <button class="btn">Sign in with Google</button>-->
+
+</div>
+
+
+</body>
+</html>
